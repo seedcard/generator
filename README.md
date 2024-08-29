@@ -8,7 +8,7 @@ holding, exchanging, and trading Bitcoin.
 1. Ensure python is install on the computer system
 2. Setup the python environment using "python3 -m venv env"
 3. Install all the project dependencies using pip3
-    <p style="color: red;">pip install -r requirements.txt</p>
+    > pip3 install -r requirements.txt
 4. To run the API:
     > run python3 app.py
 ```
