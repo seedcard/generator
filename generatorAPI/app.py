@@ -1,12 +1,12 @@
 from flask import Flask, request, jsonify, abort
-from seedcard import generate_random_number,sparrow_same, compute_fingerprint, checkSum, generate_new_walletx, format_number, split_into_chunks, sha256_hash, get_bip39_words, generate_xpub, create_qr_code_flask
+from generatorAPI.seedcard import generate_random_number,sparrow_same, compute_fingerprint, checkSum, generate_new_walletx, format_number, split_into_chunks, sha256_hash, get_bip39_words, generate_xpub, create_qr_code_flask
 import base64
 from io import BytesIO
 from PIL import Image
 import random
 from flask_cors import CORS, cross_origin
 from flask import Response
-from generate import generate_new_wallet
+from generatorAPI.generate import generate_new_wallet
 
 app = Flask(__name__)
 CORS(app)

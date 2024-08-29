@@ -6,9 +6,9 @@ import getpass
 from PIL import Image
 from bip_utils import Bip39MnemonicGenerator, Bip39SeedGenerator, Bip39MnemonicValidator, Bip39WordsNum, Bip39MnemonicDecoder, Bip44, Bip44Coins, Bip44PublicKey
 from mnemonic import Mnemonic
-from wordlist import Wordlist
-from checksum import checkSum
-from figerprint import compute_fingerprint
+from generatorAPI.wordlist import Wordlist
+from generatorAPI.checksum import checkSum
+from generatorAPI.figerprint import compute_fingerprint
 
 def get_bip39_words(bin_chunks):
     concatenated_indices = ""  # To hold the concatenated 4-digit indices

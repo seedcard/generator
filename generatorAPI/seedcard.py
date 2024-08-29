@@ -6,10 +6,10 @@ import getpass
 from PIL import Image
 from bip_utils import Bip39MnemonicGenerator, Bip39SeedGenerator, Bip39MnemonicValidator, Bip39WordsNum, Bip39MnemonicDecoder, Bip44, Bip44Coins, Bip44PublicKey
 from mnemonic import Mnemonic
-from wordlist import Wordlist
-from checksum import checkSum
-from figerprint import compute_fingerprint
-from generate import generate_new_wallet
+from generatorAPI.wordlist import Wordlist
+from generatorAPI.checksum import checkSum
+from generatorAPI.figerprint import compute_fingerprint
+from generatorAPI.generate import generate_new_wallet
 
 sparrow_same = []
 def hex_to_decimal(hex_str):
