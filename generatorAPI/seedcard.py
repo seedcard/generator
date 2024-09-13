@@ -6,10 +6,10 @@ import getpass
 from PIL import Image
 from bip_utils import Bip39MnemonicGenerator, Bip39SeedGenerator, Bip39MnemonicValidator, Bip39WordsNum, Bip39MnemonicDecoder, Bip44, Bip44Coins, Bip44PublicKey
 from mnemonic import Mnemonic
-from generatorAPI.wordlist import Wordlist
-from generatorAPI.checksum import checkSum
-from generatorAPI.figerprint import compute_fingerprint
-from generatorAPI.generate import generate_new_wallet
+from wordlist import Wordlist
+from checksum import checkSum
+from figerprint import compute_fingerprint
+from generate import generate_new_wallet
 
 sparrow_same = []
 def hex_to_decimal(hex_str):
@@ -135,7 +135,8 @@ def generate_new_walletx(seed_words):
     
     return new_words, new_hex
 
-def create_qr_code_flask(data, filename="qr_code.png"):
+# def create_qr_code_flask(data, filename="qr_code.png"):
+def create_qr_code_flask(data):
     qr = qrcode.QRCode(
         version=1,
         error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -145,6 +146,7 @@ def create_qr_code_flask(data, filename="qr_code.png"):
     qr.add_data(data)
     qr.make(fit=True)
     img = qr.make_image(fill='black', back_color='white')
+    # img.save(filename)
     return img
 
 
